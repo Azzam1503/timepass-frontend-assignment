@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Ubuntu", sans-serif;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eef5ff;
+}
+
+.main{
+    min-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.confirmation-container div{
+    line-height: 1.6rem;
+    color: gray;
+}
+
+.sidebar{
+    padding: 10px;
+}
+
+.container{
+    margin-right: 120px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 60px;
+    width: 45%;
+}
+
+.steps{
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+.step{
+    display: flex;
+    align-items: center; 
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.step-circle{
+    height: 32px;
+    width: 32px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    color: white;
+}
+
+.active-circle{
+    background-color: #eef5ff;
+    color: black;
+}
+
+.step-number{
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+.step-title{
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+
+.personal-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.info-div{
+    margin-top: 25px;
+}
+.info-input{
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+.title{
+    margin-bottom: 9px;
+}
+
+.plan-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.plan-box{
+    border: 2px solid grey;
+    padding: 10px;
+    border-radius: 10px;
+    height: 150px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.plan-img{
+    width: 50px;
+}
+
+.active-plan{
+    background-color: #eef5ff;
+    border: 2px solid #483eff;
+}
+
+.plan-box:hover{
+    border: 2px solid #483eff;
+}
+
+.addons-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.addon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid grey;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.addon-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-inline: 20px;
+    /* margin-left: 20px; */
+}
+
+.addon input {
+    width: 20px;
+    height: 20px;
+}
+
+.addon h3{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.addon p{
+    font-size: 14px;
+    color: gray;
+    margin-top: 5px;
+}
+
+.addon-price{
+    font-size: 14px;
+    font-weight: bold;
+    color: #483eff;
+}
+
+.addon:hover {
+    border-color: #483eff;
+}
+
+.total-bg{
+    background-color: #eef5ff;
+    border-radius: 8px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.total{
+    width: 100%;
+    padding: 20px;
+}
+
+.plan-total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.finish-line{
+    margin: 20px 0;
+}
+
+.service-total{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.total-amount{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px auto;
+}
+
+.total-amount h3{
+    font-size: 20px;
+    color: #483eff;
+}
+
+.confirmation-container{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+.error {
+  border-color: red;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.billing-toggle {
+  background-color: #eef5ff;
+  padding: 20px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #483eff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+.change{
+    font-size: 14px;
+    color: #483eff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.btn{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-btn{
+    color: gray;
+    cursor: pointer;
+}
+
+.next-btn{
+    background-color: #483eff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 8px;
+}
+
+
